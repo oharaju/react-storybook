@@ -7,10 +7,12 @@ export default function Badge ({state, children}) {
 }
 
 Badge.propTypes = {
+  /**
+   * Nome dentro do badge
+   */
   children: PropTypes.string.isRequired,
-  state: PropTypes.string,
-};
-
-Badge.defaultProps = {
-  disabled: false
+  /**
+   * Estado do badge
+   */
+  state: PropTypes.string.isRequired,
 };
