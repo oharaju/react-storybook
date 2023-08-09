@@ -29,3 +29,10 @@ export const Neutral = {
     state: 'neutral'
   },
 };
+
+export const Warning = {
+  args: {
+    children: 'warning',
+    state: 'warning'
+  },
+};

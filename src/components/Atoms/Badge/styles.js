@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 
-
 export const BadgeColors = styled.span`
   background-color: #198754;
   color: #FFFFFF;
@@ -17,7 +16,12 @@ export const BadgeColors = styled.span`
   `}
 
   ${({ state }) => state === 'neutral' && `
-      background-color: #e2e2e2;
+    background-color: #e2e2e2;
+    color: #3B3F42;
+  `}
+
+  ${({ state }) => state === 'warning' && `
+      background-color: #FFC107;
       color: #3B3F42;
     `}
 `
