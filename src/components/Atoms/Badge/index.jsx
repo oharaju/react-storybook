@@ -8,11 +8,11 @@ export default function Badge ({state, children}) {
 
 Badge.propTypes = {
   /**
-   * Nome dentro do badge
+   * Badge name
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOf(['positive', 'negative', 'neutral', 'warning']).isRequired,
   /**
-   * Estado do badge
+   * Badge status
    */
-  state: PropTypes.string.isRequired,
+  state: PropTypes.oneOf(['positive', 'negative', 'neutral', 'warning']).isRequired,
 };
