@@ -1,13 +1,19 @@
-import { Container }  from './styles.js';
+import { Container, Details, Summary }  from './styles.js';
+import { PropTypes } from 'prop-types';
 
-export default function Accordion ()  {
+export default function Accordion ( { subtitle, resume } )  {
   return(
     <Container>
       <h2>Hypertext Accordion</h2>
-      <div>
-        <p>Details</p>
-        <div>Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis apeirian, an qui latine alienum. Ad mea libris maluisset, consul assueverit sea ex.</div>
-      </div>
+      <Details>
+        <Summary>{subtitle}</Summary>
+        <p>{resume}</p>
+      </Details>
     </Container>
   )
+}
+
+Accordion.propTypes = {
+  subtitle: PropTypes.oneOf(['Details', 'Features', 'Information', 'Specifications']),
+  resume: PropTypes.string,
 }
