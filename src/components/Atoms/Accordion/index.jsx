@@ -20,5 +20,5 @@ Accordion.propTypes = {
   list : PropTypes.arrayOf(PropTypes.shape({
     subtitle: PropTypes.string.isRequired,
     resume: PropTypes.string.isRequired
-  }))
+  })).isRequired
 }
